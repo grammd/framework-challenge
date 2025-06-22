@@ -12,7 +12,7 @@ a.active {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
 }
