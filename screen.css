@@ -5,10 +5,9 @@ a.active {
 
 :root {
     --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #000000;
+    --text-color: #002B6C;
+    --primary-color: #002B6C;
     --secondary-color: #ffffff;
-    --accent-color: #e60023; /* A strong red for accents */
 }
 
 body {
@@ -93,7 +92,7 @@ body {
 .about-image {
     width: 100%;
     height: 350px;
-    background: #f0f0f0;
+    background: #e6eef8; /* Light blue from previous theme */
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -148,9 +147,9 @@ p {
 }
 
 /* Add accent color to the first value proposition */
-.about-section:nth-of-type(3) .about-grid h3:first-of-type {
+/*.about-section:nth-of-type(3) .about-grid h3:first-of-type {
     color: var(--accent-color);
-}
+}*/
 
 @media (max-width: 768px) {
     .about-grid {
