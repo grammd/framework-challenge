@@ -22,7 +22,7 @@ body {
 .hero {
     background: var(--primary-color);
     color: var(--secondary-color);
-    padding: 6rem 2rem 4rem 2rem;
+    padding: 6rem 0 4rem 0;
     text-align: left;
     margin-bottom: 4rem;
 }
@@ -175,4 +175,19 @@ p {
     h2 {
         font-size: 2rem;
     }
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: left;
+    opacity: 0.8;
 }
