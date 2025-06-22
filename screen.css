@@ -17,6 +17,9 @@ body {
     background-color: var(--background-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 .hero {
@@ -191,3 +194,4 @@ footer p {
     text-align: left;
     opacity: 0.8;
 }
+
