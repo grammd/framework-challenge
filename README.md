@@ -6,4 +6,4 @@ CSS framework used was primarily Bootstrap after switching from a classless fram
 
 Link: https://frameworkchallengedg.netlify.app/
 
-All pages should validate.
+page should validate.
