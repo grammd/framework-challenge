@@ -196,6 +196,31 @@ h1 {
     padding: 0;
 }
 
+.values-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.value-item {
+    margin-bottom: 2rem;
+}
+
+.value-item:last-child {
+    margin-bottom: 0;
+}
+
+.value-item h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.value-item p {
+    margin-bottom: 0;
+    padding: 0;
+}
+
 /* Contact Grid */
 .contact-card {
     background: white;
@@ -224,4 +249,5 @@ h1 {
         font-size: 2.5rem;
     }
 }
+
 
