@@ -184,43 +184,6 @@ h1 {
     line-height: 1.8;
 }
 
-/* Values section alignment */
-.section h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-}
-
-.section p {
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.values-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.value-item {
-    margin-bottom: 0;
-}
-
-.value-item:last-child {
-    margin-bottom: 0;
-}
-
-.value-item h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.value-item p {
-    margin-bottom: 0;
-    padding: 0;
-}
-
 /* Contact Grid */
 .contact-card {
     background: white;
