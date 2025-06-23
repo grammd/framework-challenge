@@ -4,129 +4,469 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Helsinki Airport</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
-    <link rel="stylesheet" href="screen.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --text-color: #003580;
+            --primary-color: #003580;
+            --secondary-color: #ffffff;
+            --accent-color: #f0f8ff;
+            --grid-gap: 2rem;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2, h3, h4, h5, h6 {
+            color: var(--primary-color);
+            font-weight: bold;
+            letter-spacing: -0.02em;
+        }
+        
+        h1 {
+            color: white;
+            font-weight: bold;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            letter-spacing: -0.03em;
+        }
+        
+        /* Header with Logo */
+        .header {
+            background: white;
+            padding: 1.5rem 0;
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        
+        .nav-link {
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--primary-color);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        /* Stats Grid */
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border: 2px solid var(--primary-color);
+            text-align: center;
+            transition: transform 0.2s;
+            height: 100%;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Timeline */
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: white;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+        }
+        
+        /* Image Sections */
+        .image-card {
+            background: var(--accent-color);
+            border: 2px solid var(--primary-color);
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, var(--primary-color), #0056b3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-style: italic;
+        }
+        
+        .image-content {
+            padding: 1.5rem;
+        }
+        
+        .image-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Contact Grid */
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border: 2px solid var(--primary-color);
+            text-align: center;
+            height: 100%;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="hero">
+    <!-- Header with Logo -->
+    <header class="header">
         <div class="container">
-            <h1>Helsinki Airport</h1>
-            <p>Connecting Finland to the World Since 1952</p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="logo">HEL</div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#services">Services</a>
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>HELSINKI AIRPORT</h1>
+            <p>Gateway to Finland and the Nordic Region Since 1952</p>
+        </div>
+    </section>
 
     <div class="container">
-        <section class="about-section">
-            <h2>About Our Airport</h2>
-            <div class="about-grid">
-                <div>
-                    <p>Helsinki Airport (HEL) is Finland's main international airport and the primary hub for air travel in the country. Located in the city of Vantaa, approximately 17 kilometers north of the Helsinki city center, our airport serves as a vital connection point between Europe and Asia.</p>
-                    <p>With our commitment to sustainability and passenger comfort, we've created a modern facility that reflects Finnish design principles while maintaining the highest standards of safety and efficiency.</p>
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2 class="section-title">About Our Airport</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Helsinki Airport (HEL) is Finland's main international airport and a major hub for air travel in the Nordic region. Located in Vantaa, just 17 kilometers north of Helsinki, our airport serves as the primary gateway to Finland and a key connection point between Europe and Asia.</p>
+                    <p>With our commitment to Finnish design excellence and passenger comfort, we've created a modern facility that reflects the clean, functional aesthetic that Finland is known for worldwide.</p>
                 </div>
-                <div class="about-image">
-                    [Airport Terminal Image]
+                <div class="col-lg-6">
+                    <div class="image-placeholder">
+                        [Helsinki Airport Terminal Exterior]
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">15M+</div>
-                <div class="stat-label">Annual Passengers</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">130+</div>
-                <div class="stat-label">Destinations</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Operations</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">92%</div>
-                <div class="stat-label">On-Time Performance</div>
+        <!-- Statistics Section -->
+        <section class="section">
+            <h2 class="section-title">Key Statistics</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-number">18M+</div>
+                        <div class="stat-label">Annual Passengers</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Destinations</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Operations</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">On-Time Performance</div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="about-section">
-            <h2>Our History</h2>
+        <!-- History Section -->
+        <section class="section">
+            <h2 class="section-title">Our History</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-year">1952</div>
                     <div>
                         <h3>Airport Opening</h3>
-                        <p>Helsinki Airport was opened for the Summer Olympics, establishing a new international gateway for Finland.</p>
+                        <p>Helsinki Airport officially opened its doors, coinciding with the Helsinki Summer Olympics and becoming Finland's primary international gateway.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">1969</div>
                     <div>
-                        <h3>New Terminal</h3>
-                        <p>A new, modern passenger terminal was inaugurated to handle the increasing number of travelers.</p>
+                        <h3>Terminal 1</h3>
+                        <p>First major terminal expansion completed, designed by Finnish architect Viljo Revell, featuring the iconic glass facade.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2009</div>
+                    <div class="timeline-year">1993</div>
                     <div>
-                        <h3>Major Expansion</h3>
-                        <p>Terminal 2 underwent a significant expansion to enhance long-haul flight capacity, especially for Asian routes.</p>
+                        <h3>Terminal 2</h3>
+                        <p>Second terminal opened to accommodate growing passenger numbers and international traffic.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2021</div>
+                    <div class="timeline-year">2022</div>
                     <div>
-                        <h3>Terminal 2 Redevelopment</h3>
-                        <p>A new iconic entrance and arrivals hall were opened as part of a major development program to improve passenger experience.</p>
+                        <h3>Major Renovation</h3>
+                        <p>Completed extensive renovation project including new check-in areas, security facilities, and enhanced passenger experience.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="about-section">
-            <h2>Our Values</h2>
-            <div class="about-grid">
-                <div>
-                    <h3>Sustainability</h3>
-                    <p>We're committed to reducing our environmental impact through renewable energy, efficient operations, and eco-friendly practices.</p>
+        <!-- Services Section -->
+        <section class="section" id="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Check-in Area]
+                        </div>
+                        <div class="image-content">
+                            <h3>Modern Check-in</h3>
+                            <p>State-of-the-art self-service kiosks and traditional check-in counters for all passenger needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Security Area]
+                        </div>
+                        <div class="image-content">
+                            <h3>Security Excellence</h3>
+                            <p>Advanced security screening with minimal wait times and maximum safety standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Shopping Area]
+                        </div>
+                        <div class="image-content">
+                            <h3>Retail & Dining</h3>
+                            <p>Premium shopping experience with Finnish design stores and international brands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section" id="gallery">
+            <h2 class="section-title">Airport Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Terminal Interior]
+                        </div>
+                        <div class="image-content">
+                            <h3>Main Terminal</h3>
+                            <p>Spacious and light-filled terminal designed with Finnish architectural principles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Runway View]
+                        </div>
+                        <div class="image-content">
+                            <h3>Runway Operations</h3>
+                            <p>Efficient runway system handling both domestic and international flights.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Aircraft Parking]
+                        </div>
+                        <div class="image-content">
+                            <h3>Aircraft Parking</h3>
+                            <p>Modern aircraft parking facilities with advanced ground support equipment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Control Tower]
+                        </div>
+                        <div class="image-content">
+                            <h3>Air Traffic Control</h3>
+                            <p>State-of-the-art air traffic control tower ensuring safe operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="section">
+            <h2 class="section-title">Our Values</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Sisu</h3>
+                    <p>We embody the Finnish spirit of determination and resilience, ensuring reliable operations even in challenging conditions.</p>
                     
                     <h3>Innovation</h3>
-                    <p>Constantly embracing new technologies to improve passenger experience and operational efficiency.</p>
+                    <p>Embracing cutting-edge technology and Finnish design principles to create the best possible passenger experience.</p>
                 </div>
-                <div>
+                <div class="col-lg-6">
                     <h3>Safety</h3>
-                    <p>Maintaining the highest standards of safety and security for all passengers and staff.</p>
+                    <p>Maintaining the highest standards of safety and security, reflecting Finland's commitment to excellence.</p>
                     
-                    <h3>Community</h3>
-                    <p>Serving as a vital economic and social hub for the greater Helsinki region and Finland.</p>
+                    <h3>Sustainability</h3>
+                    <p>Leading the way in environmental responsibility with carbon-neutral operations and sustainable practices.</p>
                 </div>
             </div>
         </section>
 
-        <section class="about-section">
-            <h2>Contact Information</h2>
-            <div class="about-grid">
-                <div>
-                    <h3>Address</h3>
-                    <p>Lentäjäntie 1<br>
-                    Vantaa, 01530<br>
-                    Finland</p>
-                    
-                    <h3>Phone</h3>
-                    <p>+358 20 708 000</p>
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Contact Information</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card">
+                        <h3>Address</h3>
+                        <p>Lentäjäntie 3<br>
+                        01530 Vantaa<br>
+                        Finland</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Email</h3>
-                    <p>info@finavia.fi</p>
-                    
-                    <h3>Emergency</h3>
-                    <p>Contact local authorities.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card">
+                        <h3>Phone</h3>
+                        <p>+358 20 708 0000</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card">
+                        <h3>Email</h3>
+                        <p>info@helsinki-airport.fi</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card">
+                        <h3>Emergency</h3>
+                        <p>+358 20 708 0001</p>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Helsinki Airport. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Helsinki Airport. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
