@@ -187,12 +187,12 @@ h1 {
 /* Values section alignment */
 .section h3 {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding-top: 0;
 }
 
 .section p {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     padding: 0;
 }
 
@@ -203,7 +203,7 @@ h1 {
 }
 
 .value-item {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .value-item:last-child {
@@ -212,7 +212,7 @@ h1 {
 
 .value-item h3 {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding: 0;
 }
 
