@@ -184,6 +184,18 @@ h1 {
     line-height: 1.8;
 }
 
+/* Values section alignment */
+.section h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-top: 0;
+}
+
+.section p {
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
 /* Contact Grid */
 .contact-card {
     background: white;
